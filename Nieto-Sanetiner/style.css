@@ -32,8 +32,18 @@
     font-size: 30px;
     font-weight: bold;
     padding: 0 40px;
-    line-height: 60px;
+    line-height: 80px;
  
+}
+.titulo {
+    color: azure;
+   
+    top: 10%;
+    width: 100;
+    text-align:center;
+    margin: 0 auto;
+
+
 }
 .nav-menu {
     display: flex;
@@ -52,25 +62,30 @@
     border-radius: 3px;
 }
 .nav-menu-link:hover {
-    background-color: rgb(130, 122, 110);
+    background-color: white;
     transition: 0.5s;
 }
 .contenedor {
     color: gray;
     font-family: 'Moon Dance', cursive;
     width: 100%;
+    
+    margin: 0 auto;
     height: 600px;
     overflow: hidden;
-    border-radius: 30px;
+    
     box-shadow: 5px 8px 12px black;
     
+}
+.pri {
+    width: 100;
 }
 .seg{
     width: 100%;
     height: 600px;
     overflow: hidden;
     margin: 10px auto;
-    border-radius: 20px;
+    
     box-shadow: 5px 8px 12px black ;
 }
 
@@ -100,7 +115,6 @@ body{
    column-gap: 5px;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    overflow: hidden;
-   border-radius: 10px;
    box-shadow: 5px 8px 12px black;  
 
 }
@@ -115,6 +129,7 @@ footer {
     text-align: center;
 }
 footer ul {
+    background-image:image();
     list-style: none;
     display: flex;
     margin: 10;
@@ -127,7 +142,44 @@ footer ul {
 }
     
 @media (max-width: 767px) {
+   body {
+    padding-top: 70px;
+   }
+   .header{
+    height: 60px;
+   }
+   .logo {
+    
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+}
+.nav-menu {
+   flex-direction: column;
+    margin-right: 20px;
+    align-items: center;
+    list-style: none;
+    background-color: beige;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 40px 0;
+
+    height: calc(40% - 20px);
+    overflow-y: auto;
+}
+
+.nav-menu-item {
+    line-height: 70px;
+}
+
+.nav-menu-link:hover{
+    background: color;
+    color: rgb(144, 91, 91);
+}
+
    footer {
     flex-wrap: wrap;
-   } 
+   }
 }
