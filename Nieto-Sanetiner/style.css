@@ -65,6 +65,16 @@
     background-color: white;
     transition: 0.5s;
 }
+.nav-toggle{
+    color:  black;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+
+    display: none;
+}
 .contenedor {
     color: gray;
     font-family: 'Moon Dance', cursive;
@@ -98,10 +108,7 @@ body{
     width: 300px;
     height: 200px;
 }
-.imagen2{
-    width: 300px;
-    height: 200px;
-}
+
 #texinicio{
     background-color: rgb(240, 229, 214);
     color: black;
@@ -109,6 +116,9 @@ body{
     font-family: 'Klee One', cursive;
     padding: 10px;
     margin: 10px;
+}
+#texinicio div{
+    text-align: right;
 }
 #imgres{
    display: grid;
@@ -132,8 +142,7 @@ footer ul {
     background-image:image();
     list-style: none;
     display: flex;
-    margin: 10;
-    padding: 10;
+    gap: 5px;
 }
 
 .sol {
@@ -156,7 +165,7 @@ footer ul {
 }
 .nav-menu {
    flex-direction: column;
-    margin-right: 20px;
+    
     align-items: center;
     list-style: none;
     background-color: beige;
@@ -164,10 +173,12 @@ footer ul {
     left: 0;
     top: 60px;
     width: 100%;
-    padding: 40px 0;
+    padding: 20px 0;
 
-    height: calc(40% - 20px);
+    height: calc(100% - 10px);
     overflow-y: auto;
+    left: 100%;
+    transition: left 0.3s;
 }
 
 .nav-menu-item {
@@ -178,8 +189,16 @@ footer ul {
     background: color;
     color: rgb(144, 91, 91);
 }
-
+.nav-toggle{
+    display: block;
+}
+.nav-menu_visible{
+    left: 0;
+}
    footer {
     flex-wrap: wrap;
+   }
+   footer ul{
+    
    }
 }
