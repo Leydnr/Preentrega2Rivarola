@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
-    
+
 }
 
 /*inicio*/
-.header{
-    background-color:rgb(247, 241, 233) ;
+.header {
+    background-color: rgb(247, 241, 233);
     font-family: 'Aboreto', cursive;
-   background-size: cover;
+    background-size: cover;
     height: 80px;
     position: fixed;
     width: 100%;
@@ -16,104 +16,118 @@
     left: 0;
 
 }
+
 /*navegación*/
 .nav {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 992x;
     margin: 0 auto;
     cursor: pointer;
 }
+
 .nav-link {
     color: black;
     text-decoration: none;
 }
+
 .logo {
-    
+
     font-size: 30px;
     font-weight: bold;
-    padding: 0 40px;
+    padding: 10 40px;
     line-height: 80px;
- 
+
 }
+
 .titulo {
     color: azure;
-   position: absolute;
+    position: absolute;
     top: 20%;
     width: 50%;
-    text-align:center;
+    text-align: center;
     margin: 0 auto;
 
 
 }
+
 .nav-menu {
     display: flex;
     margin-right: 40px;
     list-style: none;
 }
+
 .nav-menu-item {
-    font-size: 18;
+    font-size: 15px;
     margin: 0 10px;
     line-height: 80px;
     text-transform: uppercase;
     width: max-content;
 }
-.nav-menu-link{
+
+.nav-menu-link {
     padding: 8px 12px;
     border-radius: 3px;
 }
+
 .nav-menu-link:hover {
     background-color: white;
     transition: 0.5s;
 }
+
 /*icono*/
-.nav-toggle{
-    color:  black;
+.nav-toggle {
+    color: white;
     background: none;
     border: none;
     font-size: 30px;
     padding: 0 20px;
     line-height: 60px;
-
+    cursor: pointer;
     display: none;
 }
+
 /*principal*/
 .contenedor {
     color: gray;
     font-family: 'Moon Dance', cursive;
     width: 100%;
-    
+
     margin: 0 auto;
     height: 400px;
     overflow: hidden;
     margin: 10 10px;
     box-shadow: 5px 8px 12px black;
-    
+
 }
+
 /*imagenes inicio*/
 .pri {
     width: 100%;
-    
+
     box-shadow: 5px 8px 12px black;
 }
-.seg{
+
+.seg {
     width: 100%;
     height: 390px;
     box-shadow: 5px 8px 12px black;
 }
 
-body{
+body {
     background-color: rgb(240, 229, 214);
     padding: 90px 15px;
     margin: 20px;
 }
+
 /*imagenes inicio*/
-.imagen1{
+.imagen1 {
     width: 100%;
-    height: 300px;
+    height: 200px;
 }
+
 /*texto*/
-#texinicio{
+#texinicio {
     background-color: rgb(240, 229, 214);
     color: black;
     text-align: center;
@@ -121,22 +135,26 @@ body{
     padding: 10px;
     margin: 10px;
 }
-#texinicio div{
+
+#texinicio div {
     text-align: right;
 }
+
 /*imagenes centro*/
-#imgres{
-   display: grid;
-   column-gap: 5px;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   overflow: hidden;
-   box-shadow:  black;  
+#imgres {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    overflow: hidden;
+    box-shadow: black;
     width: 100%;
 }
+
 #imgres img {
     max-width: 100%;
-    
+
 }
+
 /*pie*/
 footer {
     background-color: rgb(240, 229, 214);
@@ -144,178 +162,222 @@ footer {
     justify-content: space-between;
     text-align: center;
 }
+
 footer ul {
-    background-image:image();
+    background-image: image();
     list-style: none;
     display: flex;
     gap: 5px;
 }
+
 /*icono pie*/
 .sol {
     margin: auto;
     display: block;
 }
+
 /*Bodega*/
-h3{
+h3 {
     text-align: center;
     color: gray;
     font-family: 'Klee One', cursive;
 }
-.textbodega{
+
+.textbodega {
     color: rgb(163, 161, 161);
     font-family: 'Klee One', cursive;
     text-align: center;
 }
+
 .bodega {
     max-width: 100%;
 }
- /*contacto*/
-nav{
+
+/*contacto*/
+.nav {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    
+    grid-template-columns: repeat(2, 1fr);
+
 
 }
-form{
+
+form {
     font-family: 'Klee One', cursive;
     color: rgb(81, 79, 79);
 }
 
-/*Nosotros+/
-
-
-
-   /*media query*/ 
-@media (max-width: 767px) {
-   body {
-    padding-top: 70px;
-   }
-   .header{
-    height: 60px;
-   }
-   .logo {
-    
-    font-size: 25px;
-    padding: 0 20px;
-    line-height: 60px;
-}
-.nav-menu {
-   flex-direction: column;
-    
-    align-items: center;
-    list-style: none;
-    background-color: beige;
-    position: fixed;
-    left: 0;
-    top: 60px;
+/*Nosotros*/
+#nosotros {
+    display: flex;
     width: 100%;
-    padding: 20px 0;
-
-    height: calc(100% - 10px);
-    overflow-y: auto;
-    left: 100%;
-    transition: left 0.3s;
-}
-
-.nav-menu-item {
-    line-height: 70px;
-}
-
-.nav-menu-link:hover{
-    background: color;
-    color: rgb(144, 91, 91);
-}
-.nav-toggle{
-    display: block;
-}
-.nav-menu_visible{
-    left: 0;
-}
-
-.contenedor {
-    color: gray;
-    font-family: 'Moon Dance', cursive;
-    width: 100%;
-    
-    margin:  0 ;
-    height: 70%;
-    overflow: hidden;
-    
-    box-shadow: 5px 8px 12px black;
-    
-}
-.titulo {
-   position: initial;
-   height: 0px;
-   top: 20%;
-    width: 100%;
-    text-align:star;
-    margin: 0 px;
-    
-  
-}
-.pri {
-    width: 100%;
-    height: 200px;
-   
-    box-shadow: 4px 6px 10px black;
-}
-.seg{
-    width: 100%;
-    height: 200px;
-    box-shadow: 4px 6px 10px black;
-}
-
-body{
-    background-color: rgb(240, 229, 214);
-    padding: 70px 5px;
-    margin: 10px;
-}
-#imgres{
-   width: 0%;
-   position: absolute;
- }
-
-
-#texinicio{
-    background-color: rgb(240, 229, 214);
-    color: black;
-    text-align: center;
-    font-family: 'Klee One', cursive;
-    padding: 10px;
-    margin: 10px;
-}
-#texinicio div{
-    text-align: center;
-}
-footer .inicio{
-    left: 50%;
-    right: 50%;
-    margin: auto;
-}
-footer ul {
-   margin: 0 60%;
-   
-}
-
-.sol {
-    margin: auto;
-    display: block;
-}
-
-
-   footer {
+    justify-content: space-around;
     flex-wrap: wrap;
-   }
-   
+
+
+
 }
-@media (max-width: 575px){
-    footer .inicio{
+
+#nosotros .imagen2 {
+    display: flex;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 15px;
+
+}
+
+#principalnosotros {
+    color: rgb(103, 101, 101);
+    font-family: 'Klee One', cursive;
+    text-align: center;
+}
+
+
+/*Media Queries*/
+@media (max-width: 767px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .logo {
+
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        margin-right: 20px;
+        align-items: center;
+
+        background-color: rgb(251, 251, 236);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover {
+        background: white;
+        color: rgb(130, 111, 111);
+    }
+
+    .nav-toggle {
+        display: block;
+
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .contenedor {
+        color: gray;
+        font-family: 'Moon Dance', cursive;
+        width: 100%;
+
+        margin: 0;
+        height: 70%;
+        overflow: hidden;
+
+        box-shadow: 5px 8px 12px black;
+
+    }
+
+    .titulo {
+        position: initial;
+        height: 0px;
+        top: 20%;
+        width: 100%;
+        text-align: star;
+        margin: 0 px;
+
+
+    }
+
+    .pri {
+        width: 100%;
+        height: 200px;
+
+        box-shadow: 4px 6px 10px black;
+    }
+
+    .seg {
+        width: 100%;
+        height: 200px;
+        box-shadow: 4px 6px 10px black;
+    }
+
+    .body {
+        background-color: rgb(240, 229, 214);
+        padding: 70px 5px;
+        margin: 10px;
+    }
+
+    #imgres {
+        width: 0%;
+        position: absolute;
+    }
+
+
+    #texinicio {
+        background-color: rgb(240, 229, 214);
+        color: black;
+        text-align: center;
+        font-family: 'Klee One', cursive;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #texinicio div {
+        text-align: center;
+    }
+
+    footer .inicio {
         left: 50%;
         right: 50%;
         margin: auto;
     }
+
     footer ul {
-       margin: 0 30% ;
+        margin: 0 60%;
+
     }
-} 
+
+    .sol {
+        margin: auto;
+        display: block;
+    }
+
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 575px) {
+    footer .inicio {
+        left: 50%;
+        right: 50%;
+        margin: auto;
+    }
+
+    footer ul {
+        margin: 0 30%;
+    }
+}
