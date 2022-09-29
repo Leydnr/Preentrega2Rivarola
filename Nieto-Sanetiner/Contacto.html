@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nieto Sanetiner</title>
     <link rel="shortcut icon" href="/Nieto-Sanetiner/imagenes/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -14,14 +16,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Aboreto&family=Gantari:wght@100;400;700&family=Klee+One:wght@400;600&family=Whisper&display=swap"
         rel="stylesheet">
-
+    <script src="https://use.fontawesome.com/ab683d9228.js"></script>
+    <script defer src="index.js"></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="nav">
             <img src="imagenes/logo_2.svg" class="logo nav-link" alt="" width=150>
-            <ul class="nav-menu">
+            <button class="nav-toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="nav-menu ">
                 <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link">Inicio</a></li>
                 <li class="nav-menu-item"><a href="nosotros.html" class="nav-menu-link nav-link">Nosotros</a></li>
                 <li class="nav-menu-item"><a href="bodegas.html" class="nav-menu-link nav-link">Bodegas</a></li>
@@ -37,38 +43,39 @@
 
 
     <nav>
-        <section>
+        <section id="imagencontacto">
             <div>
                 <img src="imagenes/inicio07.jpeg" class="imagen1" alt="">
             </div>
         </section>
-        <section>
+        <section id="formulario">
             <form action="">
                 <label for="">Nombre</label>
-                <input type="text" name="nombre" value="" required>
+                <input type="text" class="formulario" name="nombre" value="" required>
                 <br>
                 <label for="">Apellido</label>
-                <input type="text" name="nombre" value="" required>
+                <input type="text" class="formulario" name="nombre" value="" required>
                 <br>
-                <label for="">email</label>
-                <input type="email" name="" id="" name="nombre" value="ejemplo@ejemplo.com" required>
+                <label for="">Email</label>
+                <input type="email" class="formulario" name="" id="" name="nombre" value="ejemplo@ejemplo.com" required>
                 <br>
                 <label for="">Consultas</label>
-                <input type="radio" name="Consultas" value="consultas">
+                <input type="radio" class="formulario" name="Consultas" value="consultas">
                 <label for="">Reservas</label>
-                <input type="radio" name="Consultas" value="reservas">
+                <input type="radio" class="formulario" name="Consultas" value="reservas">
                 <label for="">Turismo</label>
-                <input type="radio" name="Consultas" value="Turismo">
+                <input type="radio" class="formulario" name="Consultas" value="Turismo">
                 <br>
                 <label for="">Comentarios</label>
-                <textarea name="" id="" cols="30" rows="5"></textarea>
-                <input type="submit" value="Enviar">
+                <textarea class="formula" name="" id="" cols="30" rows="5"></textarea>
+                <input type="submit" class="formu" value="Enviar">
             </form>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15021.179930362932!2d-68.93011999554301!3d-33.01465439321539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967de01ee9cfbf17%3A0x27e853c566108065!2sBodegas%20Nieto%20Senetiner!5e0!3m2!1ses!2sar!4v1662514907727!5m2!1ses!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
         </section>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15021.179930362932!2d-68.93011999554301!3d-33.01465439321539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967de01ee9cfbf17%3A0x27e853c566108065!2sBodegas%20Nieto%20Senetiner!5e0!3m2!1ses!2sar!4v1662514907727!5m2!1ses!2sar"
-            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
         <section>
 
         </section>
@@ -79,16 +86,16 @@
     </nav>
 
 
-    <footer> 
+    <footer>
 
         <div class="inicio">
-            <h4>BODEGA <br>Guardia Vieja 2000,<br> Vistalba, Lujan de cuyo,<br> Mendoza, Argentina </h4>
+            <h4>BODEGA <br>Guardia Vieja 2000,<br>Vistalba, Lujan de cuyo,<br> Mendoza, Argentina </h4>
         </div>
         <div class="inicio">
-            <h4>HORARIOS DE VISITAS <br> Solo con reserva previa,<br>Tel:+54 9 261 682 3000 </h4>
+            <h4>HORARIOS DE VISITAS<br>Solo con reserva previa,<br>Tel:+54 9 261 682 3000 </h4>
         </div>
         <div class="inicio">
-            <h4>ATENCION AL CLIENTE<br> info@nietosanetiner.com </h4>
+            <h4>ATENCION AL CLIENTE<br>info@nietosanetiner.com </h4>
         </div>
         <div>
             <ul>
@@ -98,7 +105,7 @@
                 <li><img src="imagenes/tiktok.jpg" alt="" width="52"></li>
             </ul>
         </div>
-        
+
     </footer>
 </body>
 
