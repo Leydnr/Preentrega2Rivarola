@@ -102,7 +102,7 @@
   margin: 0 auto;
   height: 400px;
   overflow: hidden;
-  margin: 10 10px;
+  margin: 10px 10px;
   box-shadow: 5px 8px 12px black;
 }
 
@@ -130,12 +130,18 @@ body {
 /*imagenes inicio*/
 /* line 124, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 .imagen1 {
-  width: 100%;
+  width: 290px;
   height: 200px;
 }
 
+/* line 129, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+.imagen2 {
+  width: 290px;
+  height: 300px;
+}
+
 /*texto*/
-/* line 130, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 135, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 #texinicio {
   background-color: #f0e5d6;
   color: black;
@@ -145,29 +151,44 @@ body {
   margin: 10px;
 }
 
-/* line 139, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-#texinicio div {
-  text-align: right;
-}
-
 /*imagenes centro*/
-/* line 144, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-#imgres {
+/* line 149, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#inicio {
   display: grid;
-  column-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  overflow: hidden;
   box-shadow: black;
-  width: 100%;
+  background-size: contain;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 200px 150px;
+  grid-template-areas: " img1 img2 img3 img4" "texto texto texto img4";
 }
 
-/* line 153, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-#imgres img {
-  max-width: 100%;
+/* line 163, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+div:nth-child(1) {
+  grid-area: img1;
+}
+
+/* line 167, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+div:nth-child(2) {
+  grid-area: img2;
+}
+
+/* line 171, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+div:nth-child(3) {
+  grid-area: img3;
+}
+
+/* line 175, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+div:nth-child(4) {
+  grid-area: img4;
+}
+
+/* line 179, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+div:nth-child(5) {
+  grid-area: texto;
 }
 
 /*pie*/
-/* line 159, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 188, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 footer {
   background-color: #f0e5d6;
   display: flex;
@@ -175,7 +196,7 @@ footer {
   text-align: center;
 }
 
-/* line 166, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 196, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 footer ul {
   background-image: image();
   list-style: none;
@@ -184,47 +205,110 @@ footer ul {
 }
 
 /*icono pie*/
-/* line 174, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 204, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 .sol {
   margin: auto;
   display: block;
 }
 
 /*Bodega*/
-/* line 180, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-h3 {
-  text-align: center;
-  color: gray;
-  font-family: 'Klee One', cursive;
+/* line 211, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#bodega {
+  display: flex;
 }
 
-/* line 186, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-.textbodega {
+/* line 214, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#bodega .textbodega {
+  display: flex;
   color: #a3a1a1;
   font-family: 'Klee One', cursive;
   text-align: center;
+  padding: 20px;
 }
 
-/* line 192, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-.bodega {
-  max-width: 100%;
+/* line 223, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+h3 {
+  text-align: center;
+  color: #4a4848;
+  font-family: 'Klee One', cursive;
+}
+
+/* line 230, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#imgbodega {
+  display: flex;
+  gap: 5px;
+  margin: 5px;
+  padding: 5px;
+  background-size: contain;
+}
+
+/* line 237, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#imgbodega .bodega {
+  max-width: 50%;
 }
 
 /*contacto*/
-/* line 197, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-.nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* line 247, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#contacto {
+  display: flex;
 }
 
-/* line 204, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 250, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#contacto #imagencontacto {
+  padding: 0 10px;
+  background-size: contain;
+}
+
+/* line 254, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+#contacto #imagencontacto .imagcontac {
+  width: 600px;
+  height: 710px;
+}
+
+/* line 261, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 form {
+  width: 500px;
+  margin: auto;
+  background: none;
+  padding: 10 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  border-radius: 7px;
   font-family: 'Klee One', cursive;
   color: #514f4f;
+  font-size: 15px;
+}
+
+/* line 273, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+form .consultas {
+  font-display: column;
+  width: 10%;
+}
+
+/* line 278, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+form Input, form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* line 283, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+form h2 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* line 290, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+form .mapa {
+  width: 600px;
+  height: 200px;
 }
 
 /*Nosotros*/
-/* line 210, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 297, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 #nosotros {
   display: flex;
   width: 100%;
@@ -232,7 +316,7 @@ form {
   flex-wrap: wrap;
 }
 
-/* line 220, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 307, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 #nosotros .imagen2 {
   display: flex;
   width: 300px;
@@ -240,7 +324,7 @@ form {
   margin-bottom: 15px;
 }
 
-/* line 228, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+/* line 315, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
 #principalnosotros {
   color: #676565;
   font-family: 'Klee One', cursive;
@@ -249,21 +333,21 @@ form {
 
 /*Media Queries*/
 @media (max-width: 767px) {
-  /* line 237, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 324, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   body {
     padding-top: 70px;
   }
-  /* line 241, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 328, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .header {
     height: 60px;
   }
-  /* line 245, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 332, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .logo {
     font-size: 25px;
     padding: 0 20px;
     line-height: 60px;
   }
-  /* line 252, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 339, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .nav-menu {
     flex-direction: column;
     margin-right: 20px;
@@ -279,24 +363,24 @@ form {
     left: 100%;
     transition: left 0.3s;
   }
-  /* line 270, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 357, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .nav-menu-item {
     line-height: 70px;
   }
-  /* line 274, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 361, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .nav-menu-link:hover {
     background: white;
     color: #826f6f;
   }
-  /* line 279, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 366, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .nav-toggle {
     display: block;
   }
-  /* line 284, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 371, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .nav-menu_visible {
     left: 0;
   }
-  /* line 288, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 375, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .contenedor {
     color: gray;
     font-family: 'Moon Dance', cursive;
@@ -306,7 +390,7 @@ form {
     overflow: hidden;
     box-shadow: 5px 8px 12px black;
   }
-  /* line 301, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 388, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .titulo {
     position: initial;
     height: 0px;
@@ -315,73 +399,124 @@ form {
     text-align: star;
     margin: 0 px;
   }
-  /* line 312, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 398, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .pri {
     width: 100%;
     height: 200px;
     box-shadow: 4px 6px 10px black;
   }
-  /* line 319, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 405, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .seg {
     width: 100%;
     height: 200px;
     box-shadow: 4px 6px 10px black;
   }
-  /* line 325, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 411, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .body {
     background-color: #f0e5d6;
     padding: 70px 5px;
     margin: 10px;
   }
-  /* line 331, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-  #imgres {
+  /* line 420, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #inicio .imagen1 {
     width: 0%;
-    position: absolute;
   }
-  /* line 337, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-  #texinicio {
+  /* line 424, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #inicio .imagen2 {
+    width: 0%;
+  }
+  /* line 428, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #inicio #texinicio {
     background-color: #f0e5d6;
     color: black;
     text-align: center;
     font-family: 'Klee One', cursive;
     padding: 10px;
-    margin: 10px;
+    margin: 30px;
+    position: absolute;
   }
-  /* line 346, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
-  #texinicio div {
-    text-align: center;
-  }
-  /* line 350, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 442, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   footer .inicio {
     left: 50%;
     right: 50%;
     margin: auto;
   }
-  /* line 356, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 448, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   footer ul {
-    margin: 0 60%;
+    margin: 0;
   }
-  /* line 361, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 453, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   .sol {
     margin: auto;
     display: block;
   }
-  /* line 367, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 459, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   footer {
     flex-wrap: wrap;
+  }
+  /* line 465, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #bodega .textbodega {
+    text-align: none;
+    font-size: 0%;
+  }
+  /* line 473, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  h3 {
+    text-align: center;
+    color: #4a4848;
+    font-family: 'Klee One', cursive;
+  }
+  /* line 480, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #imgbodega {
+    display: contents;
+    gap: 5px;
+    margin: 5px;
+    padding: 5px;
+    background-size: contain;
+  }
+  /* line 487, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #imgbodega .bodega {
+    max-width: 100%;
+  }
+  /*contacto*/
+  /* line 496, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #contacto #imagencontacto {
+    padding: 0 10px;
+    background-size: contain;
+  }
+  /* line 500, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  #contacto #imagencontacto .imagcontac {
+    width: 0px;
+    height: 0px;
+  }
+  /* line 507, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: contain;
+  }
+  /* line 515, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  form Input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* line 522, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  form .mapa {
+    width: fit-content;
   }
 }
 
 @media (max-width: 575px) {
-  /* line 374, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 532, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   footer .inicio {
     left: 50%;
     right: 50%;
     margin: auto;
   }
-  /* line 380, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
+  /* line 538, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/style.scss */
   footer ul {
-    margin: 0 30%;
+    margin: 0 5%;
   }
 }
 

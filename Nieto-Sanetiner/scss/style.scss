@@ -96,7 +96,7 @@
     margin: 0 auto;
     height: 400px;
     overflow: hidden;
-    margin: 10 10px;
+    margin: 10px 10px;
     box-shadow: 5px 8px 12px black;
 
 }
@@ -122,8 +122,13 @@ body {
 
 /*imagenes inicio*/
 .imagen1 {
-    width: 100%;
+    width: 290px;
     height: 200px;
+}
+
+.imagen2 {
+    width: 290px;
+    height: 300px;
 }
 
 /*texto*/
@@ -134,26 +139,50 @@ body {
     font-family: 'Klee One', cursive;
     padding: 10px;
     margin: 10px;
+
 }
 
-#texinicio div {
-    text-align: right;
-}
+
 
 /*imagenes centro*/
-#imgres {
+
+#inicio {
     display: grid;
-    column-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    overflow: hidden;
     box-shadow: black;
-    width: 100%;
+    background-size: contain;
+
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: 200px 150px;
+    grid-template-areas:
+        " img1 img2 img3 img4"
+        "texto texto texto img4"
+    ;
+
 }
 
-#imgres img {
-    max-width: 100%;
-
+div:nth-child(1) {
+    grid-area: img1;
 }
+
+div:nth-child(2) {
+    grid-area: img2;
+}
+
+div:nth-child(3) {
+    grid-area: img3;
+}
+
+div:nth-child(4) {
+    grid-area: img4;
+}
+
+div:nth-child(5) {
+    grid-area: texto;
+}
+
+
+
+
 
 /*pie*/
 footer {
@@ -161,6 +190,7 @@ footer {
     display: flex;
     justify-content: space-between;
     text-align: center;
+
 }
 
 footer ul {
@@ -177,33 +207,90 @@ footer ul {
 }
 
 /*Bodega*/
+
+#bodega {
+    display: flex;
+
+    .textbodega {
+        display: flex;
+        color: rgb(163, 161, 161);
+        font-family: 'Klee One', cursive;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
 h3 {
     text-align: center;
-    color: gray;
+    color: rgb(74, 72, 72);
     font-family: 'Klee One', cursive;
+
 }
 
-.textbodega {
-    color: rgb(163, 161, 161);
-    font-family: 'Klee One', cursive;
-    text-align: center;
+#imgbodega {
+    display: flex;
+    gap: 5px;
+    margin: 5px;
+    padding: 5px;
+    background-size: contain;
+
+    .bodega {
+        max-width: 50%;
+
+    }
 }
 
-.bodega {
-    max-width: 100%;
-}
+
+
 
 /*contacto*/
-.nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+#contacto {
+    display: flex;
+   
+    #imagencontacto {
+        padding: 0 10px;
+        background-size: contain;
 
-
+        .imagcontac {
+            width: 600px;
+            height: 710px;
+        }
+    }
 }
 
 form {
+    width: 500px;
+    margin: auto;
+    background: none;
+    padding: 10 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border-radius: 7px;
     font-family: 'Klee One', cursive;
     color: rgb(81, 79, 79);
+    font-size: 15px;
+    
+    .consultas{
+        font-display: column;
+        width: 10%;
+    }
+
+    Input, textarea{
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    h2{
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .mapa{
+        width: 600px;
+        height: 200px;
+    }
 }
 
 /*Nosotros*/
@@ -306,7 +393,6 @@ form {
         text-align: star;
         margin: 0 px;
 
-
     }
 
     .pri {
@@ -328,24 +414,30 @@ form {
         margin: 10px;
     }
 
-    #imgres {
-        width: 0%;
-        position: absolute;
+    #inicio {
+
+
+        .imagen1 {
+            width: 0%
+        }
+
+        .imagen2 {
+            width: 0%;
+        }
+
+        #texinicio {
+            background-color: rgb(240, 229, 214);
+            color: black;
+            text-align: center;
+            font-family: 'Klee One', cursive;
+            padding: 10px;
+            margin: 30px;
+            position: absolute;
+        }
     }
 
 
-    #texinicio {
-        background-color: rgb(240, 229, 214);
-        color: black;
-        text-align: center;
-        font-family: 'Klee One', cursive;
-        padding: 10px;
-        margin: 10px;
-    }
 
-    #texinicio div {
-        text-align: center;
-    }
 
     footer .inicio {
         left: 50%;
@@ -354,7 +446,7 @@ form {
     }
 
     footer ul {
-        margin: 0 60%;
+        margin: 0;
 
     }
 
@@ -368,7 +460,73 @@ form {
         flex-wrap: wrap;
     }
 
+    #bodega {
+
+        .textbodega {
+
+            text-align: none;
+            font-size: 0%;
+
+        }
+    }
+
+    h3 {
+        text-align: center;
+        color: rgb(74, 72, 72);
+        font-family: 'Klee One', cursive;
+
+    }
+
+    #imgbodega {
+        display: contents;
+        gap: 5px;
+        margin: 5px;
+        padding: 5px;
+        background-size: contain;
+
+        .bodega {
+            max-width: 100%;
+
+        }
+    }
+    /*contacto*/
+#contacto {
+    
+   
+    #imagencontacto {
+        padding: 0 10px;
+        background-size: contain;
+
+        .imagcontac {
+            width: 0px;
+            height: 0px;
+        }
+    }
 }
+
+form {
+    width: 100%;
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;
+    background-size: contain;
+    
+
+    Input, textarea{
+        width: 100%;
+        margin-bottom: 10px;
+
+        
+    }
+    
+    .mapa{
+        width: fit-content;
+    }
+}
+
+
+}
+
 
 @media (max-width: 575px) {
     footer .inicio {
@@ -378,6 +536,6 @@ form {
     }
 
     footer ul {
-        margin: 0 30%;
+        margin: 0 5%;
     }
 }
