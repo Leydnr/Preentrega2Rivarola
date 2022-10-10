@@ -594,16 +594,37 @@ form .mapa {
     overflow: hidden;
     box-shadow: 5px 8px 12px black;
   }
+  /* line 232, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
+  #turismo {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+  /* line 237, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
+  #turismo div {
+    text-align: center;
+    padding: 20px 30px;
+  }
+  /* line 241, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
+  #turismo div img {
+    width: 100%;
+    height: 80%;
+  }
+  /* line 247, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
+  #turismo p {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 @media (max-width: 575px) {
-  /* line 236, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
+  /* line 257, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
   footer .inicio {
     left: 50%;
     right: 50%;
     margin: auto;
   }
-  /* line 242, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
+  /* line 263, ../../../Desktop/pre2rivarola/Nieto-Sanetiner/scss/_responsive.scss */
   footer ul {
     margin: 0 5%;
   }
