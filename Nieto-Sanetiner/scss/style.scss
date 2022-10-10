@@ -122,13 +122,15 @@ body {
 
 /*imagenes inicio*/
 .imagen1 {
-    width: 290px;
+
+    width: 100%;
     height: 200px;
+    box-shadow: black;
 }
 
 .imagen2 {
-    width: 290px;
-    height: 300px;
+    width: 100%;
+    height: 350px;
 }
 
 /*texto*/
@@ -148,10 +150,10 @@ body {
 
 #inicio {
     display: grid;
-    box-shadow: black;
+    gap: 5px;
     background-size: contain;
     box-sizing: border-box;
-    grid-template-columns: repeat(auto-fit, minmax (100px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 200px 150px;
     grid-template-areas:
         " img1 img2 img3 img4"
@@ -190,7 +192,7 @@ footer {
     display: flex;
     justify-content: space-between;
     text-align: center;
-
+    padding: 10px;
 }
 
 footer ul {
@@ -201,26 +203,29 @@ footer ul {
 }
 
 /*icono pie*/
+
 .sol {
     margin: auto;
     display: block;
+    
 }
 
 /*Bodega*/
 
 #bodega {
-    
-    
+
+
     width: 100%;
     margin: auto;
+
     .textbodega {
-        
+
         color: rgb(163, 161, 161);
         font-family: 'Klee One', cursive;
         text-align: center;
-       
+
     }
-    
+
 }
 
 h3 {
@@ -242,27 +247,37 @@ h3 {
 
     }
 }
+
 /*nuestros vinos*/
 
 #nuestrosvinos {
     display: flex;
-    list-style: none;
+
     justify-content: center;
-    
-    #nuestrosvinos div{
+    gap: 10px;
+    #nuestrosvinos div {
         flex-grow: 1;
         text-align: center;
-        
+
+
+
     }
 
-    .imagen3{
-        display: block;
+    .imagen3 {
+
         padding: 10%;
-        width: 300px;
-        height: 300px;
-        margin: auto;
-        gap: 10px;
-        
+        width: 200px;
+        height: 200px;
+
+       
+
+
+    }
+
+    h3 {
+        color: rgb(160, 152, 152);
+        font-family: 'Klee One', cursive;
+        text-align: center;
     }
 }
 
@@ -347,236 +362,38 @@ form {
     text-align: center;
 }
 
+/*turismo*/
+#turismo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    div {
+        flex-grow: 1;
+        text-align: center;
+        padding:  20px 30px;
+        img{
+            width: 300px;
+            height: 300px;
+
+        }
+    }
+    p{
+        color: rgb(103, 101, 101);
+        font-family: 'Klee One', cursive;
+        text-align: center;
+    }
+
+}
+
+#turismo2 {
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+    margin: 10px 10px;
+    box-shadow: 4px 8px 12px black;
+}
 
 /*Media Queries*/
-@media (max-width: 767px) {
-    body {
-        padding-top: 70px;
-    }
-
-    .header {
-        height: 60px;
-    }
-
-    .logo {
-
-        font-size: 25px;
-        padding: 0 20px;
-        line-height: 60px;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        margin-right: 20px;
-        align-items: center;
-
-        background-color: rgb(251, 251, 236);
-        position: fixed;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        padding: 20px 0;
-
-        height: calc(100% - 60px);
-        overflow-y: auto;
-        left: 100%;
-        transition: left 0.3s;
-    }
-
-    .nav-menu-item {
-        line-height: 70px;
-    }
-
-    .nav-menu-link:hover {
-        background: white;
-        color: rgb(130, 111, 111);
-    }
-
-    .nav-toggle {
-        display: block;
-
-    }
-
-    .nav-menu_visible {
-        left: 0;
-    }
-
-    .contenedor {
-        color: gray;
-        font-family: 'Moon Dance', cursive;
-        width: 100%;
-
-        margin: 0;
-        height: 70%;
-        overflow: hidden;
-
-        box-shadow: 5px 8px 12px black;
-
-    }
-
-    .titulo {
-        position: initial;
-        height: 0px;
-        top: 20%;
-        width: 100%;
-        text-align: star;
-        margin: 0 px;
-
-    }
-
-    .pri {
-        width: 100%;
-        height: 200px;
-
-        box-shadow: 4px 6px 10px black;
-    }
-
-    .seg {
-        width: 100%;
-        height: 200px;
-        box-shadow: 4px 6px 10px black;
-    }
-
-    .body {
-        background-color: rgb(240, 229, 214);
-        padding: 70px 5px;
-        margin: 10px;
-    }
-
-    #inicio {
-        grid-template-areas:
-            " texto texto texto texto"
-            "texto texto texto texto"
-        ;
-
-        .imagen1 {
-            width: 0%
-        }
-
-        .imagen2 {
-            width: 0%;
-        }
-
-        #texinicio {
-            display: block;
-            background-color: rgb(240, 229, 214);
-            color: black;
-            text-align: center;
-            font-family: 'Klee One', cursive;
-           
-            margin: auto;
-
-        }
-    }
-
-
-
-    /*pie*/
-
-    footer .inicio {
-        left: 50%;
-        right: 50%;
-        margin: auto;
-    }
-
-    footer ul {
-        margin: 0;
-
-    }
-
-    .sol {
-        margin: auto;
-        display: block;
-    }
-
-
-    footer {
-        flex-wrap: wrap;
-    }
-
-    /*bodega*/
-    #bodega {
-
-        .textbodega {
-
-            text-align: none;
-            font-size: 0%;
-
-        }
-    }
-
-    h3 {
-        text-align: center;
-        color: rgb(74, 72, 72);
-        font-family: 'Klee One', cursive;
-
-    }
-
-    #imgbodega {
-        display: contents;
-        gap: 5px;
-        margin: 5px;
-        padding: 5px;
-        background-size: contain;
-
-        .bodega {
-            max-width: 100%;
-
-        }
-    }
-
-    /*contacto*/
-    #contacto {
-
-
-        #imagencontacto {
-            padding: 0 10px;
-            background-size: contain;
-
-            .imagcontac {
-                width: 0px;
-                height: 0px;
-            }
-        }
-    }
-
-    form {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-size: contain;
-
-
-        Input,
-        textarea {
-            width: 100%;
-            margin-bottom: 10px;
-
-
-        }
-
-        .mapa {
-            width: fit-content;
-        }
-
-
-    }
-
-    /*nosotros*/
-
-
-}
-
-
-@media (max-width: 575px) {
-    footer .inicio {
-        left: 50%;
-        right: 50%;
-        margin: auto;
-    }
-
-    footer ul {
-        margin: 0 5%;
-    }
-}
+@import 'responsive'
