@@ -150,8 +150,8 @@ body {
     display: grid;
     box-shadow: black;
     background-size: contain;
-
-    grid-template-columns: repeat (4, 1fr);
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax (100px, 1fr));
     grid-template-rows: 200px 150px;
     grid-template-areas:
         " img1 img2 img3 img4"
@@ -209,15 +209,18 @@ footer ul {
 /*Bodega*/
 
 #bodega {
-    display: flex;
-
+    
+    
+    width: 100%;
+    margin: auto;
     .textbodega {
-        display: flex;
+        
         color: rgb(163, 161, 161);
         font-family: 'Klee One', cursive;
         text-align: center;
-        padding: 20px;
+       
     }
+    
 }
 
 h3 {
@@ -239,14 +242,36 @@ h3 {
 
     }
 }
+/*nuestros vinos*/
 
+#nuestrosvinos {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    
+    #nuestrosvinos div{
+        flex-grow: 1;
+        text-align: center;
+        
+    }
+
+    .imagen3{
+        display: block;
+        padding: 10%;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        gap: 10px;
+        
+    }
+}
 
 
 
 /*contacto*/
 #contacto {
     display: flex;
-   
+
     #imagencontacto {
         padding: 0 10px;
         background-size: contain;
@@ -269,29 +294,33 @@ form {
     font-family: 'Klee One', cursive;
     color: rgb(81, 79, 79);
     font-size: 15px;
-    
-    .consultas{
+
+    .consultas {
         font-display: column;
         width: 10%;
     }
 
-    Input, textarea{
+    Input,
+    textarea {
         width: 100%;
         margin-bottom: 20px;
         box-sizing: border-box;
     }
-    h2{
+
+    h2 {
         color: #fff;
         text-align: center;
         margin: 0;
         font-size: 30px;
         margin-bottom: 10px;
     }
-    .mapa{
+
+    .mapa {
         width: 600px;
         height: 200px;
     }
 }
+
 
 /*Nosotros*/
 #nosotros {
@@ -415,7 +444,10 @@ form {
     }
 
     #inicio {
-
+        grid-template-areas:
+            " texto texto texto texto"
+            "texto texto texto texto"
+        ;
 
         .imagen1 {
             width: 0%
@@ -426,18 +458,20 @@ form {
         }
 
         #texinicio {
+            display: block;
             background-color: rgb(240, 229, 214);
             color: black;
             text-align: center;
             font-family: 'Klee One', cursive;
-            padding: 10px;
-            margin: 30px;
-            position: absolute;
+           
+            margin: auto;
+
         }
     }
 
 
 
+    /*pie*/
 
     footer .inicio {
         left: 50%;
@@ -460,6 +494,7 @@ form {
         flex-wrap: wrap;
     }
 
+    /*bodega*/
     #bodega {
 
         .textbodega {
@@ -489,40 +524,46 @@ form {
 
         }
     }
-    /*contacto*/
-#contacto {
-    
-   
-    #imagencontacto {
-        padding: 0 10px;
-        background-size: contain;
 
-        .imagcontac {
-            width: 0px;
-            height: 0px;
+    /*contacto*/
+    #contacto {
+
+
+        #imagencontacto {
+            padding: 0 10px;
+            background-size: contain;
+
+            .imagcontac {
+                width: 0px;
+                height: 0px;
+            }
         }
     }
-}
 
-form {
-    width: 100%;
-    margin: 0;   
-    padding: 0;
-    box-sizing: border-box;
-    background-size: contain;
-    
-
-    Input, textarea{
+    form {
         width: 100%;
-        margin-bottom: 10px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: contain;
 
-        
+
+        Input,
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+
+
+        }
+
+        .mapa {
+            width: fit-content;
+        }
+
+
     }
-    
-    .mapa{
-        width: fit-content;
-    }
-}
+
+    /*nosotros*/
 
 
 }
