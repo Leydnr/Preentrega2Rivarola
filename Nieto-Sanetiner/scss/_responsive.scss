@@ -182,12 +182,10 @@
 
 
         #imagencontacto {
-            padding: 0 10px;
-            background-size: contain;
+            display: none;
 
             .imagcontac {
-                width: 0px;
-                height: 0px;
+                display: none;
             }
         }
     }
@@ -197,7 +195,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        background-size: contain;
+        
 
 
         Input,
@@ -209,7 +207,7 @@
         }
 
         .mapa {
-            width: fit-content;
+            width: 100%;
         }
 
 
