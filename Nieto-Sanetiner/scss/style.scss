@@ -21,7 +21,7 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    max-width: 992x;
+   
     margin: 0 auto;
     cursor: pointer;
 }
@@ -32,7 +32,7 @@
 }
 
 .logo {
-
+    margin-left: 40px;
     font-size: 30px;
     font-weight: bold;
     padding: 10 40px;
@@ -91,7 +91,7 @@
 .contenedor {
     color: gray;
     font-family: 'Moon Dance', cursive;
-    width: 100%;
+    width: 98%;
 
     margin: 0 auto;
     height: 400px;
@@ -104,7 +104,7 @@
 /*imagenes inicio*/
 .pri {
     width: 100%;
-
+    height: 400px;
     box-shadow: 5px 8px 12px black;
 }
 
@@ -252,12 +252,17 @@ h3 {
 }
 
 /*nuestros vinos*/
-
+.nues{
+    height: 600px;
+    width: 100%;
+}
 #nuestrosvinos {
     display: flex;
 
     justify-content: center;
     gap: 10px;
+    padding: 10px 12px;
+    
     #nuestrosvinos div {
         flex-grow: 1;
         text-align: center;
@@ -364,6 +369,7 @@ form {
     color: rgb(103, 101, 101);
     font-family: 'Klee One', cursive;
     text-align: center;
+    padding: 20px 20px;
 }
 
 /*turismo*/

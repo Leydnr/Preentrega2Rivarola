@@ -1,3 +1,45 @@
+@media (max-width: 992px) {
+    .nav-menu {
+        flex-direction: column;
+        margin-right: 20px;
+        align-items: center;
+
+        background-color: rgb(251, 251, 236);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover {
+        background: white;
+        color: rgb(130, 111, 111);
+    }
+
+    .nav-toggle {
+        display: block;
+
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+    /*nosotros*/
+    #nos{
+        display: none;
+    }
+
+}
 @media (max-width: 767px) {
     body {
         padding-top: 70px;
@@ -75,14 +117,14 @@
 
     .pri {
         width: 100%;
-        height: 200px;
+        height: 400px;
 
         box-shadow: 4px 6px 10px black;
     }
 
     .seg {
         width: 100%;
-        height: 200px;
+        height: 400px;
         box-shadow: 4px 6px 10px black;
     }
 
@@ -176,7 +218,7 @@
 
         }
     }
-
+    
     /*contacto*/
     #contacto {
 
@@ -218,6 +260,11 @@
         flex-wrap: wrap;
 
 
+    }
+
+    /*nosotros*/
+    #nosotros{
+        display: none;
     }
     #turismo2{
         width: 100%;
